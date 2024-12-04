@@ -61,7 +61,12 @@ public class Main {
         compoundShape.add(dot);
         compoundShape.add(circle);
         compoundShape.add(rectangle);
-
+        //do  100 times
+        for (int i = 0; i < 100; i++) {
+            compoundShape.add(dot);
+            compoundShape.add(circle);
+            compoundShape.add(rectangle);
+        }
         CompoundShape c = new CompoundShape(5);
         c.add(dot);
         compoundShape.add(c);
@@ -83,7 +88,12 @@ public class Main {
         compoundShape.add(dot);
         compoundShape.add(circle);
         compoundShape.add(rectangle);
-
+ // do it 100 times
+        for (int i = 0; i < 100; i++) {
+            compoundShape.add(dot);
+            compoundShape.add(circle);
+            compoundShape.add(rectangle);
+        }
         UnpatternedCompoundShape c = new UnpatternedCompoundShape(5);
         c.add(dot);
         compoundShape.add(c);
@@ -106,7 +116,6 @@ public class Main {
 
             String startData = getShellyData();
             task.run(); // Execute the test task
-            Thread.sleep(1000); // Delay to ensure energy data is updated
             String endData = getShellyData();
 
             long endTime = System.nanoTime(); // End time in nanoseconds
