@@ -61,12 +61,16 @@ public class Main {
         compoundShape.add(dot);
         compoundShape.add(circle);
         compoundShape.add(rectangle);
-        //do  100 times
-        for (int i = 0; i < 100; i++) {
-            compoundShape.add(dot);
-            compoundShape.add(circle);
-            compoundShape.add(rectangle);
+        for (int i = 0; i < 10000; i++) { // Da 100 a 10000 o più
+            Dot newDot = new Dot(i, 10 + i, 55 + i);
+            Circle newCircle = new Circle(i, 23 + i, 15 + i, 10 + i);
+            Rectangle newRectangle = new Rectangle(i, 10 + i, 17 + i, 20 + i, 30 + i);
+
+            compoundShape.add(newDot);
+            compoundShape.add(newCircle);
+            compoundShape.add(newRectangle);
         }
+
         CompoundShape c = new CompoundShape(5);
         c.add(dot);
         compoundShape.add(c);
@@ -89,11 +93,16 @@ public class Main {
         compoundShape.add(circle);
         compoundShape.add(rectangle);
  // do it 100 times
-        for (int i = 0; i < 100; i++) {
-            compoundShape.add(dot);
-            compoundShape.add(circle);
-            compoundShape.add(rectangle);
+        for (int i = 0; i < 10000; i++) { //
+            UnpatternedDot newDot = new UnpatternedDot(i, 10 + i, 55 + i);
+            UnpatternedCircle newCircle = new UnpatternedCircle(i, 23 + i, 15 + i, 10 + i);
+            UnpatternedRectangle newRectangle = new UnpatternedRectangle(i, 10 + i, 17 + i, 20 + i, 30 + i);
+
+            compoundShape.add(newDot);
+            compoundShape.add(newCircle);
+            compoundShape.add(newRectangle);
         }
+
         UnpatternedCompoundShape c = new UnpatternedCompoundShape(5);
         c.add(dot);
         compoundShape.add(c);
